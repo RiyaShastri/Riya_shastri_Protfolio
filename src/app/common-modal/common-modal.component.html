@@ -1,0 +1,49 @@
+<div class="modal  bd-example-modal-lg" tabindex="-1" role="dialog" [ngStyle]="{'display':displayModel}"
+    *ngIf="modalData">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">{{modalData['projectName']}}</h4>
+                <button type="button" class="close closemodel" aria-label="Close" (click)="onCloseHandled()">
+                    <span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="img-container">
+                    <div class="image">
+                        <img src="assets/img/projectImg/{{modalData['logo']}}" *ngIf="modalData['logo']"
+                            style="float:right;">
+                        <img src="assets/img/projectImg/12.png" class="card-img-top cardimg" alt="projectImg"
+                            *ngIf="!modalData['logo']" style="float:right;">
+                    </div>
+                    <div style="float:left;">
+                        <p *ngIf="modalData['liveURL']">
+                            <strong>Live URL :</strong>
+                            <a [href]="modalData['liveURL']" target="_blank"> {{modalData['liveURL']}}</a>
+                        </p>
+                        <p *ngIf="modalData['technology']">
+                            <strong>Technology :</strong>
+                            <a> {{modalData['technology']}}</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text">
+                        <div *ngIf="modalData['description']" class="mb-2">
+                            <strong>Description :</strong>
+                            <div [innerHTML]="projectDesc"> </div>
+                        </div>
+                        <div *ngIf="modalData['responsibilities'] && modalData['responsibilities'].length > 0">
+                            <strong>Responsibilities :</strong>
+                            <ul>
+                                <li *ngFor="let detail of modalData['responsibilities']">
+                                    <i class="bi bi-chevron-right"></i>
+                                    <span>{{detail}}</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

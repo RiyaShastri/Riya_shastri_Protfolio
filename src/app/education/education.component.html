@@ -1,0 +1,28 @@
+<div class="section-title">
+    <h2>Education and Experience</h2>
+</div>
+
+<div class="row">
+    <div class="col-lg-6" data-aos="fade-up">
+        <h3 class="resume-title">Education</h3>
+        <div class="resume-item" *ngFor="let education of educationList">
+            <h4>{{education.title}}</h4>
+            <h5>{{education.year}}</h5>
+            <p><em>{{education.schoolName}}</em></p>
+            <p> {{education.detail}}
+            </p>
+        </div>
+
+    </div>
+    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="resume-title">Professional Experience</h3>
+        <div class="resume-item" *ngFor="let detail of experience">
+            <h4>{{detail.title}}</h4>
+            <h5>{{detail.time}}</h5>
+            <p><em>{{detail.company}}</em></p>
+            <ul *ngFor="let subDetail of detail['detailList'] ">
+                <li>{{subDetail}}</li>
+            </ul>
+        </div>
+    </div>
+</div>

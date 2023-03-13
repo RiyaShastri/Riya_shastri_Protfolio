@@ -1,0 +1,51 @@
+<div class="d-flex flex-column">
+
+    <div class="profile">
+        <img src="assets/img/1.JPG" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light">Riya Shastri</h1>
+        <a href="assets/Riya_Shastri_CV.pdf" class="nav-link scrollto cv text-light" target="_blank"> Open CV </a>
+    </div>
+
+    <nav id="navbar" class="nav-menu navbar">
+        <ul>
+            <li>
+
+                <a href="javascript:void(0)" class="nav-link scrollto" [ngxScrollTo]="'#about'"
+                    (click)="triggerScrollTo('about')" [ngClass]="activeLink == 'about' ? 'active' : '' "><i
+                        class="bx bx-user"></i>
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" class="nav-link scrollto" [ngxScrollTo]="'#skill'"><i
+                        [ngClass]="activeLink == 'skill' ? 'active' : '' " (click)="triggerScrollTo('skill')"
+                        class="bx bx-file-blank"></i>
+                    <span>Skills</span></a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" class="nav-link scrollto" (click)="triggerScrollTo('projects')"
+                    [ngClass]="activeLink == 'projects' ? 'active' : '' " [ngxScrollTo]="'#projects'"><i
+                        class="bx bx-server"></i>
+                    <span>Projects</span></a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" class="nav-link scrollto" (click)="triggerScrollTo('education')"
+                    [ngClass]="activeLink == 'education' ? 'active' : '' " [ngxScrollTo]="'#education'"><i
+                        class="bx bx-book-content"> </i>
+                    <span>Education & Experience</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" class="nav-link scrollto" [ngxScrollTo]="'#award'"
+                    [ngClass]="activeLink == 'award' ? 'active' : '' " (click)="triggerScrollTo('award')">
+                    <i class="bx bx-award"> </i>
+                    <span>Achievement</span>
+                </a>
+            </li>
+            <li><a href="javascript:void(0)" class="nav-link scrollto" [ngxScrollTo]="'#contact'"
+                    [ngClass]="activeLink == 'contact' ? 'active' : '' " (click)="triggerScrollTo('contact')">
+                    <i class="bx bx-envelope"></i> <span>Contact</span></a>
+            </li>
+        </ul>
+    </nav>
+</div>

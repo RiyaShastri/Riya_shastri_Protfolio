@@ -1,0 +1,18 @@
+<div class="section-title">
+    <h2>Achievement</h2>
+</div>
+
+<div class="row" data-aos="fade-in">
+
+    <div class="col d-flex align-items-stretch">
+        <div class="info" *ngFor="let award of awardDetail">
+            <div class="{{award.classname}}">
+                <i [class]="award.icon"></i>
+                <h4>{{award.title}}</h4>
+                <p>{{award.value}}</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>

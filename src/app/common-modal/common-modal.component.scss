@@ -1,0 +1,35 @@
+.modal {
+    background: rgba(0, 0, 0, .5) !important;
+}
+
+.closemodel {
+    border-radius: 50%;
+    background-color: #ff0000a3;
+    color: white;
+    border-color: transparent;
+}
+
+.img-container {
+    display: flex;
+    align-items: center;
+    // justify-content: end
+}
+
+img {
+    max-width: 80%
+}
+
+.image {
+    order: 2;
+}
+
+ul {
+    list-style: none;
+}
+
+ul i {
+    font-size: 16px;
+    margin-right: 5px;
+    color: #149ddd;
+    line-height: 0;
+}
