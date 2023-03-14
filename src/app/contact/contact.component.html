@@ -4,8 +4,8 @@
 
 <div class="row" data-aos="fade-in">
 
-    <div class="col d-flex align-items-stretch">
-        <div class="info" *ngFor="let detail of userDetail">
+    <div class="col-md-4 col-sm col-lg-4 d-flex align-items-stretch" *ngFor="let detail of userDetail">
+        <div class="info">
             <div class="{{detail.classname}}">
                 <i [class]="detail.icon"></i>
                 <h4>{{detail.title}}</h4>

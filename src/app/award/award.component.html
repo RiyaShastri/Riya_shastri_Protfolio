@@ -4,8 +4,8 @@
 
 <div class="row" data-aos="fade-in">
 
-    <div class="col d-flex align-items-stretch">
-        <div class="info" *ngFor="let award of awardDetail">
+    <div class="col-md-6 col-sm-6 col-lg-6 d-flex align-items-stretch" *ngFor="let award of awardDetail">
+        <div class="info">
             <div class="{{award.classname}}">
                 <i [class]="award.icon"></i>
                 <h4>{{award.title}}</h4>
