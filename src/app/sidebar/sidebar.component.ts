@@ -10,9 +10,12 @@ export class SidebarComponent implements OnInit {
 
   activeLink = 'about';
 
-  constructor(private scrollToService: ScrollToService) { }
+  constructor(private scrollToService: ScrollToService) {
+
+  }
 
   ngOnInit(): void {
+    this.triggerScrollTo('about');
   }
 
   triggerScrollTo(id: any) {
